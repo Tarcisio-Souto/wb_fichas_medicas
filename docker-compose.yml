@@ -1,0 +1,50 @@
+version: '3.8'
+services:
+
+  # imagem fichas_medicas
+  fichas_medicas:
+    build:
+      args:
+        user: tss
+        uid: 1000
+      context: ./
+      dockerfile: Dockerfile
+    image: fichas_medicas
+    restart: unless-stopped
+    working_dir: /var/www
+    volumes:
+      - ./:/var/www
+    networks:
+      - fm_service
+
+  #nginx
+  nginx:
+    image: nginx:alpine
+    restart: unless-stopped
+    ports:
+      - 8000:80
+    volumes:
+      - ./:/var/www
+      - ./docker/nginx/:/etc/nginx/conf.d/
+    networks:
+      - fm_service
+
+  # db
+  db_fichas_medicas:
+    image: mysql:5.7.22
+    restart: unless-stopped
+    ports:
+      - ${DB_PORT}:3306
+    volumes:
+      - ./.docker/mysql/dbdata:/var/lib/mysql #Database will be saved in this folder... DON'T FORGET to add it in .gitignore
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    networks:
+      - fm_service
+
+networks:
+  fm_service:
+    driver: bridge
