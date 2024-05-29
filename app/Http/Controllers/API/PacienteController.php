@@ -8,6 +8,14 @@ use Illuminate\Http\Request;
 
 class PacienteController extends Controller
 {
+    private $paciente;
+    private $path = '';
+
+    public function __construct(Paciente $paciente)
+    {
+        $this->paciente = $paciente;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -19,16 +27,6 @@ class PacienteController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -36,7 +34,10 @@ class PacienteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+
+
+
     }
 
     /**
@@ -46,17 +47,6 @@ class PacienteController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Paciente $paciente)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Paciente  $paciente
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Paciente $paciente)
     {
         //
     }

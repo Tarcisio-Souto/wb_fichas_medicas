@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 class FichaController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -19,16 +20,6 @@ class FichaController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -36,7 +27,7 @@ class FichaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
@@ -46,17 +37,6 @@ class FichaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Ficha $ficha)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Ficha  $ficha
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Ficha $ficha)
     {
         //
     }
