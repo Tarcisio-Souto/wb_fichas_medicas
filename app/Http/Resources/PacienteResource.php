@@ -16,7 +16,7 @@ class PacienteResource extends JsonResource
     {
         return [
             'identify' => $this->id,
-            'name' => $this->name,
+            'name' => $this->nome,
             'dtnasc' => $this->dtnasc,
             'sexo' => $this->sexo
         ];

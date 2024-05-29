@@ -27,8 +27,6 @@ class JsonController extends Controller
     public function storeJson(StoreUpdateJsonFormRequest $req)
     {
 
-        #dd($req->consultas[0]["dtvisita"]);
-
         $nome = $req->nome;
         $dtnasc = $req->dtnasc;
         $sexo = $req->sexo;
