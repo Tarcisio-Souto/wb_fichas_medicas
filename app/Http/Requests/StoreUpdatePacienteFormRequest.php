@@ -24,7 +24,7 @@ class StoreUpdatePacienteFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|min:5',
+            'nome' => 'required|min:5',
             'dtnasc' => 'required',
             'sexo' => 'required'
         ];

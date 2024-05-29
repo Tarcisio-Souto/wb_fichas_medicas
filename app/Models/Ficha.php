@@ -9,6 +9,8 @@ class Ficha extends Model
 {
     use HasFactory;
 
+    protected $table = 'ficha';
+
     protected $fillable = ['dtvisita', 'paciente_id'];
 
 }

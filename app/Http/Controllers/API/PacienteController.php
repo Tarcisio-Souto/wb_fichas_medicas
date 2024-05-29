@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreUpdatePacienteFormRequest;
+use App\Http\Resources\PacienteResource;
 use App\Models\Paciente;
 use Illuminate\Http\Request;
 
@@ -21,9 +23,10 @@ class PacienteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $req)
     {
-        return response()->json(['success' => 'oláaaa']);
+        $paciente = $this->paciente->listaPacientes($req->name);
+        return response()->json(['success' => $paciente, 200]);
     }
 
     /**
@@ -32,12 +35,13 @@ class PacienteController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreUpdatePacienteFormRequest $request)
     {
-        
 
+        dd($request->all());
 
-
+        #$paciente = $this->paciente->create($request->all());
+        #return new PacienteResource($paciente);        
     }
 
     /**
