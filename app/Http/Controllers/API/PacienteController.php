@@ -23,6 +23,33 @@ class PacienteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
+    /**
+     * @OA\Get(
+     *      path="/paciente",
+     *      operationId="pegaPacienteLista",
+     *      tags={"Paciente"},
+     *      summary="Pega lista de pacientes",
+     *      description="Retorna lista de pacientes",
+     *      @OA\Parameter(name="filter", in="query", description="filter", required=false,
+     *        @OA\Schema(type="string")
+     *      ),
+     *      @OA\Response(
+     *          response=200,
+     *          description="Successful operation",
+     *          @OA\JsonContent(ref="#/components/schemas/PacienteResource")
+     *       ),
+     *      @OA\Response(
+     *          response=401,
+     *          description="Unauthenticated",
+     *      ),
+     *      @OA\Response(
+     *          response=403,
+     *          description="Forbidden"
+     *      )
+     *     )
+     */
     public function index(Request $req)
     {
         $paciente = $this->paciente->listaPacientes($req->name);
@@ -38,7 +65,7 @@ class PacienteController extends Controller
     public function store(StoreUpdatePacienteFormRequest $request)
     {
 
-        dd($request->all());
+        //dd($request->all());
 
         #$paciente = $this->paciente->create($request->all());
         #return new PacienteResource($paciente);        

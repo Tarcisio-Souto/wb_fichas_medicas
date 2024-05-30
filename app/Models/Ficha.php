@@ -13,4 +13,10 @@ class Ficha extends Model
 
     protected $fillable = ['dtvisita', 'paciente_id'];
 
+    public function paciente() {
+
+        return $this->hasMany(Paciente::class);
+
+    }
+
 }

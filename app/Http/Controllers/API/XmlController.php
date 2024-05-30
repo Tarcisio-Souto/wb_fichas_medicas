@@ -13,6 +13,52 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Saloon\XmlWrangler\XmlReader;
 
+
+/**
+     * @OA\Post(
+     *      path="/enviar-xml",
+     *      operationId="storeXml",
+     *      tags={"XML"},
+     *      summary="Registrar pacientes e suas visitas",
+     *      description="",
+     *      @OA\RequestBody(
+     *         @OA\XmlContent(
+     *            @OA\Schema(
+     *               type="object",
+     *               required={"nome", "dtnasc", "sexo", "dtvisita"},
+     *               @OA\Property(property="nome", type="string"),
+     *               @OA\Property(property="dtnasc", type="date"),
+     *               @OA\Property(property="sexo", type="string"),
+     *               @OA\Property(property="dtvisita", type="date")
+     *            ),
+     *         ),
+     *      ),
+     *      @OA\Response(
+     *          response=201,
+     *          description="Successful operation",
+     *       ),
+     *      @OA\Response(
+     *          response=400,
+     *          description="Bad Request"
+     *      ),
+     *      @OA\Response(
+     *          response=401,
+     *          description="Unauthenticated",
+     *      ),
+     *      @OA\Response(
+     *          response=403,
+     *          description="Forbidden"
+     *      ),
+     *      @OA\Response(
+     *          response=422,
+     *          description="Validation error"
+     *      ),
+     *      @OA\Response(
+     *          response=500,
+     *          description="Internal error"
+     *      ),
+     * )
+     */
 class XmlController extends Controller
 {
     private $paciente;

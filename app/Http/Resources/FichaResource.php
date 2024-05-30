@@ -16,7 +16,7 @@ class FichaResource extends JsonResource
     {
         return [
             'identify' => $this->id,
-            'paciente' => new PacienteResource($this->paciente),
+            //'paciente' => new PacienteResource($this->paciente),
             'dtvisita' => $this->dtvisita
         ];
     }
