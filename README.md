@@ -50,25 +50,25 @@ O sistema foi desenvolvido utilizando containers Docker para facilitar a implant
 
 ><b>/documentation</b><br>
 
-![Screenshot](https://github.com/Tarcisio-Souto/wb_fichas_medicas/blob/main/capturas/overview.png)
+![Screenshot](https://github.com/Tarcisio-Souto/wb_fichas_medicas/blob/main/capturas/overview.PNG)
 
 <br><br>
 
 ><b>/enviar-json</b><br>
 
-![Screenshot](https://github.com/Tarcisio-Souto/micro-01/blob/main/capturas/postJSON.png)
+![Screenshot](https://github.com/Tarcisio-Souto/micro-01/blob/main/capturas/postJSON.PNG)
 
 <br><br>
 
 ><b>/enviar-xml</b><br>
 
-![Screenshot](https://github.com/Tarcisio-Souto/micro-01/blob/main/capturas/postXML.png)
+![Screenshot](https://github.com/Tarcisio-Souto/micro-01/blob/main/capturas/postXML.PNG)
 
 <br><br>
 
 ><b>/paciente</b><br>
 
-![Screenshot](https://github.com/Tarcisio-Souto/micro-01/blob/main/capturas/getPacientes.png)
+![Screenshot](https://github.com/Tarcisio-Souto/micro-01/blob/main/capturas/getPacientes.PNG)
 
 <br><br><br>
 
