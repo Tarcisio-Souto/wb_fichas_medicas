@@ -16,6 +16,17 @@ O sistema foi desenvolvido utilizando containers Docker para facilitar a implant
     <li>Docker</li>
     <li>Containers: MySQL e NGIX Alpine</li>
 </ul>
+<br><br>
+
+><h3 align="center">Instruções Para Após a Clonagem do Projeto</h3>
+<br>
+
+<ul>
+    <li>Executar os comandos abaixo:</li>
+    <li>composer install</li>
+    <li>php artisan key:generate</li>
+    <li>docker-compose up -d</li>
+</ul>
 <br>
 
 ><h3 align="center">Requisitos</h3>
